@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hunt3R | Streamer</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<body>
+     <div id="particles-js"></div>
+    <div class="fog"></div>
+
+    <section class="hero">
+
+        <img src="image/avatar.jpg" alt="avatar" class="avatar">
+
+        <h1>hunt<span>3R</span></h1>
+
+        <p class="typing"></p>
+
+        <a href="https://www.twitch.tv/h3adhunt3rl" class="watch-btn">
+            🎥 Дивитися стрім
+        </a>
+
+    </section>
+
+    <section class="about glass">
+
+        <h2>Про мене</h2>
+
+        <p>
+            Привіт! Я HUNT3R.
+            Стрімлю Dead by Daylight, хорори та різні онлайн-ігри.
+            Заходь на стріми, спілкуйся в чаті та ставай частиною ком'юніті.
+        </p>
+
+    </section>
+
+    <section class="socials">
+
+        <h2>Соцмережі</h2>
+
+        <div class="cards">
+
+            <a href="https://www.youtube.com/@hunt3rI" class="card">
+                📺 YouTube
+            </a>
+
+            <a href="https://www.instagram.com/aleksandr.krasiy/" class="card">
+                📷 Instagram
+            </a>
+
+            <a href="https://discord.gg/hunt3r" class="card">
+                💬 Discord
+            </a>
+
+            <a href="https://www.tiktok.com/@hunt3rI" class="card">
+                🎵 TikTok
+            </a>
+
+        </div>
+
+    </section>
+
+    <section class="donate glass">
+
+        <h2>Підтримати стрім</h2>
+
+        <p>
+            Якщо подобається контент — можеш підтримати розвиток каналу.
+        </p>
+
+        <a href="https://donatello.to/h3adhunt3rl" class="donate-btn">
+            💰 DONATE
+        </a>
+
+    </section>
+
+    <section class="schedule glass">
+
+        <h2>Розклад</h2>
+
+        <div class="time-box">
+
+            <div>
+                <h3>Пн - Пт</h3>
+                <p>18:00 - 23:00</p>
+            </div>
+
+            <div>
+                <h3>Сб - Нд</h3>
+                <p>Як піде 😎</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        © 2026 HUNT3R
+    </footer>
+
+<script>
+
+const texts = [
+    "Dead by Daylight Player",
+    "Horror Enjoyer",
+    "Streamer"
+];
+
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+
+(function type(){
+
+    if(count === texts.length){
+        count = 0;
+    }
+
+    currentText = texts[count];
+    letter = currentText.slice(0, ++index);
+
+    document.querySelector(".typing").textContent = letter;
+
+    if(letter.length === currentText.length){
+        count++;
+        index = 0;
+        setTimeout(type, 1500);
+    } else {
+        setTimeout(type, 100);
+    }
+
+})();
+
+</script>
+
+</body>
+</html>
