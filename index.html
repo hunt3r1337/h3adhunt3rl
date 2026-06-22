@@ -1,146 +1,113 @@
 <!DOCTYPE html>
-<html lang="ru">
-
+<html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hunt3R | Streamer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dead By Daylight Fan Hub</title>
 
-    <link rel="stylesheet" href="style.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
 </head>
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/pageTransitions.js"></script>
+<div id="intro">
+    <h1>DEAD BY DAYLIGHT</h1>
+</div>
 
 <body>
-     <div id="particles-js"></div>
-    <div class="fog"></div>
+    
 
-    <section class="hero">
+<div id="loader">
+    <h1>DEAD BY DAYLIGHT</h1>
+</div>
 
-        <img src="avatar.jpg" alt="avatar" class="avatar">
+<video class="video-bg" autoplay muted loop playsinline>
+    <source src="video/background.mp4" type="video/mp4">
+</video>
 
-        <h1>hunt<span>3R</span></h1>
+<div class="overlay"></div>
 
-        <p class="typing"></p>
+<nav>
+    <div class="logo">DBD FAN HUB</div>
 
-        <a href="https://www.twitch.tv/h3adhunt3rl" class="watch-btn">
-            🎥 Дивитися стрім
-        </a>
+    <ul>
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="characters.html">Персонажі</a></li>
+        <li><a href="maps.html">Мапи</a></li>
+        <li><a href="news.html">Новини</a></li>
+        <li><a href="store.html">Магазин</a></li>
+    </ul>
+</nav>
 
-    </section>
+<header class="hero">
 
-    <section class="about glass">
+    <h1>ENTER THE FOG</h1>
 
-        <h2>Про мене</h2>
+    <p>
+        Survive. Escape. Repeat.
+    </p>
 
-        <p>
-            Привіт! Я HUNT3R.
-            Стрімлю Dead by Daylight, хорори та різні онлайн-ігри.
-            Заходь на стріми, спілкуйся в чаті та ставай частиною ком'юніті.
-        </p>
+    <a href="characters.html" class="btn">
+        Explore Characters
+    </a>
 
-    </section>
+</header>
 
-    <section class="socials">
+<section class="section">
 
-        <h2>Соцмережі</h2>
+    <h2>Featured Killers</h2>
 
-        <div class="cards">
+    <div class="cards">
 
-            <a href="https://www.youtube.com/@hunt3rI" class="card">
-                📺 YouTube
-            </a>
-
-            <a href="https://www.instagram.com/aleksandr.krasiy/" class="card">
-                📷 Instagram
-            </a>
-
-            <a href="https://discord.gg/hunt3r" class="card">
-                💬 Discord
-            </a>
-
-            <a href="https://www.tiktok.com/@hunt3rI" class="card">
-                🎵 TikTok
-            </a>
-
+        <div class="card">
+            <img src="images/thetrapper.jpg" alt="">
+            <h3>The Trapper</h3>
         </div>
 
-    </section>
-
-    <section class="donate glass">
-
-        <h2>Підтримати стрім</h2>
-
-        <p>
-            Якщо подобається контент — можеш підтримати розвиток каналу.
-        </p>
-
-        <a href="https://donatello.to/h3adhunt3rl" class="donate-btn">
-            💰 DONATE
-        </a>
-
-    </section>
-
-    <section class="schedule glass">
-
-        <h2>Розклад</h2>
-
-        <div class="time-box">
-
-            <div>
-                <h3>Пн - Пт</h3>
-                <p>18:00 - 23:00</p>
-            </div>
-
-            <div>
-                <h3>Сб - Нд</h3>
-                <p>Як піде 😎</p>
-            </div>
-
+        <div class="card">
+            <img src="images/thewraith.jpg" alt="">
+            <h3>The Wraith</h3>
         </div>
 
-    </section>
+        <div class="card">
+            <img src="images/killer3.jpg" alt="">
+            <h3>The Huntress</h3>
+        </div>
+        
 
-    <footer>
-        © 2026 HUNT3R
-    </footer>
+    </div>
 
-<script>
+</section>
 
-const texts = [
-    "Dead by Daylight Player",
-    "Horror Enjoyer",
-    "Streamer"
-];
+<section class="section">
 
-let count = 0;
-let index = 0;
-let currentText = "";
-let letter = "";
+    <h2>Featured Maps</h2>
 
-(function type(){
+    <div class="cards">
 
-    if(count === texts.length){
-        count = 0;
-    }
+        <div class="card">
+            <img src="images/map1.jpg" alt="">
+            <h3>MacMillan Estate</h3>
+        </div>
 
-    currentText = texts[count];
-    letter = currentText.slice(0, ++index);
+        <div class="card">
+            <img src="images/map2.jpg" alt="">
+            <h3>Autohaven Wreckers</h3>
+        </div>
 
-    document.querySelector(".typing").textContent = letter;
+        <div class="card">
+            <img src="images/map3.jpg" alt="">
+            <h3>Coldwind Farm</h3>
+        </div>
 
-    if(letter.length === currentText.length){
-        count++;
-        index = 0;
-        setTimeout(type, 1500);
-    } else {
-        setTimeout(type, 100);
-    }
+    </div>
 
-})();
+</section>
 
-</script>
+<footer>
+    <p>Fan Project • Dead By Daylight</p>
+</footer>
 
 </body>
 </html>
